@@ -1,10 +1,10 @@
-#Project description
+# Project description
 
 To build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.
 
-#User Stories
+# User Stories
 
-###Feature 1: Filter Events By City
+### Feature 1: Filter Events By City
 As a user,
 I should be able to filter events by city
 So that I can see a list of events taking place in that city.
@@ -25,7 +25,7 @@ So that I can see a list of events taking place in that city.
 • Then their city should be changed to that city (i.e., “Berlin, Germany”) AND the user should receive a list of upcoming events in that city.
 
 
-###Feature 2: Show/Hide Event Details
+### Feature 2: Show/Hide Event Details
 As a user,
 I should be able to show/hide the visibility of event details,
 So that I can customize my view based on the level of information I need.
@@ -46,7 +46,7 @@ So that I can customize my view based on the level of information I need.
 • Then the event details should be collapsed AND the user should no longer see the detailed information of the event
 
 
-###Feature 3: Specify Number of Events
+### Feature 3: Specify Number of Events
 As a user,
 I should be able to specify the number of events to be displayed,
 So that I can control the amount of information visible at a given time, ensuring a more focused and manageable view.
@@ -62,7 +62,7 @@ So that I can control the amount of information visible at a given time, ensurin
 • Then the user should see the updated list with the specified number of events AND the displayed events should match the user's specified number
 
 
-###Feature 4: Use the App When Offline
+### Feature 4: Use the App When Offline
 As a user,
 I should be able to access the app and its core features even when offline,
 So that I can continue to view and interact with event information without being dependent on an internet connection.
@@ -78,7 +78,7 @@ So that I can continue to view and interact with event information without being
 • Then the app should display an error message indicating the user is offline AND the user should not be able to modify the search settings
 
 
-###Feature 5: Add an App Shortcut to the Home Screen
+### Feature 5: Add an App Shortcut to the Home Screen
 As a mobile user,
 I should be able to add a shortcut to the app on my device's home screen,
 So that I can easily access the app with a single tap, improving user convenience and quick access.
@@ -89,7 +89,7 @@ So that I can easily access the app with a single tap, improving user convenienc
 • Then the app should prompt the user with the option to add a shortcut AND the user should be able to see the meet app shortcut on their device home screen
 
 
-###Feature 6: Display Charts Visualizing Event Details
+### Feature 6: Display Charts Visualizing Event Details
 As a user,
 I should be able to view charts that visualize event details,
 So that I can gain insights and understand patterns in a more visually appealing and comprehensible manner.
@@ -99,6 +99,6 @@ So that I can gain insights and understand patterns in a more visually appealing
 • When the user selects the "Charts" option
 • Then the chart should be displayed with accurate data
 
-#Project dependencies
+# Project dependencies
 
-#Result
+# Result
