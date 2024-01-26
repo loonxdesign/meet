@@ -99,6 +99,10 @@ So that I can gain insights and understand patterns in a more visually appealing
 • When the user selects the "Charts" option
 • Then the chart should be displayed with accurate data
 
+# Serverless Functions
+
+This app will use serverless functions for secure user access, OAuth2 token management, and interactions with the Google Calendar API. This approach ensures scalability, efficient resource use, and cost-effectiveness by only paying for executed functions, eliminating the need for dedicated servers.
+
 # Project dependencies
 
 # Result
