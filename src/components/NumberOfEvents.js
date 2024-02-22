@@ -16,7 +16,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
       setCurrentNOE(value);
     }
     setErrorAlert(infoText);
-  }
+  } 
 
   return (
     <div id="number-of-events">

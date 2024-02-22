@@ -12,7 +12,7 @@ describe('<App /> component', () => {
   test('renders list of events', () => {
     expect(AppDOM.querySelector('#event-list')).toBeInTheDocument();
   });
-  
+
   test('render CitySearch', () => {
     expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
   });
@@ -31,21 +31,23 @@ describe('<App /> integration', () => {
     const CitySearchDOM = AppDOM.querySelector('#city-search');
     const CitySearchInput = within(CitySearchDOM).queryByRole('textbox');
 
-    await user.type(CitySearchInput, "Berlin");
-    const berlinSuggestionItem = within(CitySearchDOM).queryByText('Berlin, Germany');
+    await user.type(CitySearchInput, 'Berlin');
+    const berlinSuggestionItem =
+      within(CitySearchDOM).queryByText('Berlin, Germany');
     await user.click(berlinSuggestionItem);
 
     const EventListDOM = AppDOM.querySelector('#event-list');
-    const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');   
+    const allRenderedEventItems =
+      within(EventListDOM).queryAllByRole('listitem');
 
     const allEvents = await getEvents();
     const berlinEvents = allEvents.filter(
-      event => event.location === 'Berlin, Germany'
+      (event) => event.location === 'Berlin, Germany'
     );
 
     expect(allRenderedEventItems.length).toBe(berlinEvents.length);
-    allRenderedEventItems.forEach(event => {
-      expect(event.textContent).toContain("Berlin, Germany");
+    allRenderedEventItems.forEach((event) => {
+      expect(event.textContent).toContain('Berlin, Germany');
     });
   });
 
@@ -55,11 +57,14 @@ describe('<App /> integration', () => {
     const AppDOM = AppComponent.container.firstChild;
 
     const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
-    const NumberOfEventsInput = within(NumberOfEventsDOM).queryByRole('textbox');
+    const NumberOfEventsInput =
+      within(NumberOfEventsDOM).queryByRole('textbox');
     await user.type(NumberOfEventsInput, '{backspace}{backspace}10');
 
     const EventListDOM = AppDOM.querySelector('#event-list');
-    const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
+    const allRenderedEventItems =
+      within(EventListDOM).queryAllByRole('listitem');
 
     expect(allRenderedEventItems.length).toEqual(10);
+  });
 });
