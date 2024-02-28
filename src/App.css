@@ -78,9 +78,14 @@ input[type="number"] {
   position: relative;
 }
 
-.details-btn {
+h3 {
+  margin-top: 60px;
+}
+
+.showDetailsButton {
   position: absolute;
   padding: 4px 12px 4px 12px;
+  margin-top: 4px;
   color: whitesmoke;
   background-color: #9b53ff;
   border: none;
