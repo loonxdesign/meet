@@ -3,7 +3,7 @@ import EventList from './components/EventList';
 import NumberOfEvents from './components/NumberOfEvents';
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './api';
-import { InfoAlert, ErrorAlert } from './components/Alert';
+import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 
 import './App.css';
 
@@ -16,6 +16,11 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState('');
 
   useEffect(() => {
+    if (navigator.onLine) {
+      setWarningError('');
+    } else {
+      setWarningError('You are gone offline, events are loaded from cache!');
+    }
     fetchData();
   }, [currentCity, currentNOE]);
 
