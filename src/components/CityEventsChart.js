@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import {
   ScatterChart,
   Scatter,
@@ -8,6 +7,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+import { useState, useEffect } from 'react';
+
 
 const CityEventsChart = ({ allLocations, events }) => {
   const [data, setData] = useState([]);
@@ -21,7 +22,7 @@ const CityEventsChart = ({ allLocations, events }) => {
       const count = events.filter(
         (event) => event.location === location
       ).length;
-      const city = location.split(/, | - /)[0];
+      const city = location.split((/, | - /))[0];
       return { city, count };
     });
     return data;
@@ -53,7 +54,7 @@ const CityEventsChart = ({ allLocations, events }) => {
           allowDecimals={false}
         />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-        <Scatter name="A school" data={data} fill="#9b53ff" />
+        <Scatter name="Events" data={data} fill="#9b53ff" />
       </ScatterChart>
     </ResponsiveContainer>
   );
