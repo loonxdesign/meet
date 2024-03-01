@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Spinner } from 'react-bootstrap'; // Import the Spinner component
 
 const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [isLoading, setIsLoading] = useState(false); // State to track loading state
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
@@ -31,12 +33,17 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
     setQuery(value);
     setShowSuggestions(false); // to hide the list
     setCurrentCity(value);
-    setInfoAlert("")
+    setInfoAlert('');
   };
 
   useEffect(() => {
     setSuggestions(allLocations);
   }, [`${allLocations}`]);
+
+  // Function to handle loading state
+  useEffect(() => {
+    setIsLoading(false); // Reset loading state whenever suggestions change
+  }, [suggestions]);
 
   return (
     <div id="city-search">
@@ -48,6 +55,8 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
         onFocus={() => setShowSuggestions(true)}
         onChange={handleInputChanged}
       />
+      {isLoading && <Spinner animation="border" />}{' '}
+      {/* Render spinner when loading */}
       {showSuggestions ? (
         <ul className="suggestions">
           {suggestions.map((suggestion) => {

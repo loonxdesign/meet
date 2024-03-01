@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import Container from 'react-bootstrap/Container';
 
 import * as atatus from 'atatus-spa';
 atatus.config('fd8d42d2cb704496bef2d057894d974a').install();
@@ -11,7 +12,9 @@ atatus.config('fd8d42d2cb704496bef2d057894d974a').install();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Container>
+      <App />
+    </Container>
   </React.StrictMode>
 );
 
@@ -25,4 +28,3 @@ serviceWorkerRegistration.register();
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
