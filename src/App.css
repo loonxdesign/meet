@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+.display-1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -70,16 +75,26 @@ input[type="number"] {
 }
 
 .event {
-  padding: 10px 10px 35px;
-  margin-bottom: 10px;
+  padding: 20px 40px 20px;
+  margin-bottom: 20px;
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
 }
 
-h3 {
-  margin-top: 60px;
+#noe-label {
+  color:#6c757d;
+  font-size: 14px;
+}
+
+.number-of-events-input {
+  color:#6c757d;
+}
+
+.event-box-closed {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .showDetailsButton {
@@ -93,6 +108,10 @@ h3 {
   cursor: pointer;
 }
 
+.details {
+  margin-top: 40px;
+}
+
 .alerts-container {
   position: fixed;
   top: 0px;
@@ -104,6 +123,8 @@ h3 {
 .charts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {

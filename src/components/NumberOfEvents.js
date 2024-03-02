@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Spinner } from 'react-bootstrap'; // Import the Spinner component
+import 'bootstrap/dist/css/bootstrap.css';
 
 const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const [numEvents, setNumEvents] = useState('32');
@@ -22,10 +23,10 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   };
 
   return (
-    <div id="number-of-events">
-      <label htmlFor="number-of-events-input">Number of Events: </label>
+    <div className="mt-2" id="number-of-events">
+      <label id="noe-label" className="me-2" htmlFor="number-of-events-input">Number of Events: </label>
       <input
-        type="text"
+        type="number"
         className="number-of-events-input"
         value={numEvents}
         onChange={handleInputChanged}

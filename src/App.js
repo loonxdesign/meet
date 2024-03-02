@@ -6,6 +6,7 @@ import EventGenresChart from './components/EventGenresChart';
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './api';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.css';
 
@@ -42,15 +43,15 @@ const App = () => {
   return (
     <div className="App">
       <div className="Header">
-        <h1>Meet</h1>
-        <p className="subtitle mb-4">Choose your nearest city</p>
+        <h1 className="display-1">Meet</h1>
+        <p className="subtitle mb-2"><strong>Choose your nearest city</strong></p>
       </div>
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
         {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
-      <div className="col-md-8">
+      <div className="justify-content-md-center">
         <CitySearch
           allLocations={allLocations}
           setCurrentCity={setCurrentCity}
