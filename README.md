@@ -105,6 +105,20 @@ This app will use serverless functions for secure user access, OAuth2 token mana
 
 # Project dependencies
 
+• React 
+
+• Google Calendar API
+
+• AWS Lambda
+
+• Jest (Unit and Integration Testing)
+
+• Jest Cucumber (User Acceptance Testing) 
+
+• Puppeteer (End-to-End Testing)
+
+• Atatus (Performance Monitoring) 
+
 # Result
 
 https://loonxdesign.github.io/meet/
