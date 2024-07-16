@@ -123,4 +123,4 @@ This app will use serverless functions for secure user access, OAuth2 token mana
 
 https://loonxdesign.github.io/meet/
 
-Note: If you need access to the site, please send me an e-mail with your g-mail address at mailto:hi@loon-design.de. 
+Note: If you need access to the site, please send me an e-mail with your g-mail address at hi@loon-design.de. 
